@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Propuesta SEO + Mantenimiento — Origen Legal × </title>
+<title>Propuesta SEO + Mantenimiento — Origen Legal</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,8 +31,8 @@
   /* ── COVER ── */
   .cover {
     background: var(--navy);
-    padding: 64px 60px 56px;
-    min-height: 380px;
+    padding: 56px 60px 48px;
+    min-height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -46,31 +46,25 @@
     width: 400px; height: 400px;
     border-radius: 50%;
     border: 1px solid rgba(160,175,81,0.1);
-  }
-  .cover::after {
-    content: '';
-    position: absolute;
-    bottom: -60px; left: 36%;
-    width: 260px; height: 260px;
-    border-radius: 50%;
-    border: 1px solid rgba(160,175,81,0.06);
+    pointer-events: none;
   }
   .cover-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 2; }
-  .cover-studio { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
   .cover-doc { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .cover-logo { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
   .cover-main { position: relative; z-index: 2; padding-top: 44px; }
   .cover-eyebrow { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
   .cover-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 7vw, 80px);
+    font-size: clamp(44px, 7vw, 80px);
     font-weight: 300; color: var(--off-white);
     line-height: 1.0; letter-spacing: -0.02em;
   }
   .cover-title em { font-style: italic; color: var(--gold); }
-  .cover-sub { margin-top: 16px; font-size: 13px; color: rgba(244,241,235,0.4); letter-spacing: 0.08em; }
+  .cover-sub { margin-top: 16px; font-size: 13px; color: rgba(244,241,235,0.4); letter-spacing: 0.05em; max-width: 520px; }
   .cover-bottom {
     display: flex; justify-content: space-between; align-items: flex-end;
-    padding-top: 36px; border-top: 1px solid rgba(160,175,81,0.15);
+    flex-wrap: wrap; gap: 16px;
+    padding-top: 32px; border-top: 1px solid rgba(160,175,81,0.15);
     margin-top: 44px; position: relative; z-index: 2;
   }
   .cover-meta { font-size: 12px; color: var(--muted); }
@@ -87,7 +81,7 @@
 
   .sec-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(34px, 4.5vw, 52px); font-weight: 300;
+    font-size: clamp(30px, 4.5vw, 52px); font-weight: 300;
     line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 20px;
   }
   .sec-title em { font-style: italic; color: var(--gold); }
@@ -116,21 +110,21 @@
 
   .serv-list { display: flex; flex-direction: column; gap: 0; }
   .serv-row {
-    display: grid; grid-template-columns: 56px 1fr auto;
-    align-items: start; gap: 28px;
+    display: grid; grid-template-columns: 48px 1fr auto;
+    align-items: start; gap: 24px;
     padding: 36px 0;
     border-bottom: 1px solid rgba(160,175,81,0.12);
   }
   .serv-row:first-child { border-top: 1px solid rgba(160,175,81,0.12); }
   .serv-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gold); padding-top: 4px; letter-spacing: 0.1em; }
-  .serv-name { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--off-white); margin-bottom: 10px; letter-spacing: -0.01em; }
-  .serv-desc { font-size: 13px; color: rgba(244,241,235,0.45); line-height: 1.8; max-width: 560px; }
+  .serv-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--off-white); margin-bottom: 10px; letter-spacing: -0.01em; }
+  .serv-desc { font-size: 13px; color: rgba(244,241,235,0.45); line-height: 1.8; }
   .serv-items { margin-top: 12px; display: flex; flex-direction: column; gap: 5px; }
   .serv-item { font-size: 12px; color: rgba(244,241,235,0.35); padding-left: 16px; position: relative; line-height: 1.6; }
   .serv-item::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 10px; top: 2px; }
   .serv-tag { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(160,175,81,0.3); padding: 5px 14px; white-space: nowrap; align-self: flex-start; margin-top: 4px; }
 
-  /* ── AI SEO EXPLICACIÓN ── */
+  /* ── AI EXPLICACIÓN ── */
   .ai-block { padding: 72px 60px; background: var(--cream); }
   .ai-intro {
     background: var(--navy);
@@ -140,7 +134,6 @@
   }
   .ai-intro p { font-size: 14px; color: rgba(244,241,235,0.65); line-height: 1.9; font-style: italic; }
   .ai-intro strong { color: var(--gold); font-style: normal; }
-
   .ai-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .ai-card { border: 1px solid var(--border); padding: 28px 24px; background: var(--off-white); }
   .ai-icon { font-size: 22px; margin-bottom: 14px; }
@@ -154,7 +147,7 @@
   .kw-table td { padding: 14px 16px; font-size: 13px; color: #3a4452; border-bottom: 1px solid rgba(160,175,81,0.08); vertical-align: top; line-height: 1.6; }
   .kw-table tr:last-child td { border-bottom: none; }
   .kw-badge { display: inline-block; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 9px; font-weight: 500; }
-  .kw-ai { background: #162238; color: var(--gold); }
+  .kw-ai { background: #093948; color: var(--gold); }
   .kw-google { background: var(--cream); color: var(--navy); border: 1px solid var(--border); }
   .kw-both { background: var(--gold); color: var(--navy); }
 
@@ -163,22 +156,27 @@
   .inv-block .sec-label { color: var(--gold); }
   .inv-block .sec-label::after { background: rgba(160,175,81,0.18); }
   .inv-block .sec-title { color: var(--off-white); }
-
-  .inv-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(160,175,81,0.15); margin-top: 40px; }
-  .inv-card { background: var(--navy-mid); padding: 36px 28px; }
-  .inv-card.featured { background: var(--gold); }
-  .inv-plan { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-  .inv-card.featured .inv-plan { color: rgba(14,26,43,0.6); }
-  .inv-price { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--off-white); line-height: 1; margin-bottom: 6px; letter-spacing: -0.02em; }
-  .inv-card.featured .inv-price { color: var(--navy); }
-  .inv-period { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
-  .inv-card.featured .inv-period { color: rgba(14,26,43,0.5); }
-  .inv-includes { display: flex; flex-direction: column; gap: 8px; }
-  .inv-line { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: rgba(244,241,235,0.6); line-height: 1.6; }
-  .inv-card.featured .inv-line { color: rgba(14,26,43,0.7); }
-  .inv-line::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
-  .inv-card.featured .inv-line::before { color: var(--navy); }
-  .inv-note { margin-top: 32px; font-size: 12px; color: rgba(244,241,235,0.35); font-style: italic; line-height: 1.8; }
+  .inv-single { border: 1px solid rgba(160,175,81,0.3); overflow: hidden; margin-top: 40px; }
+  .inv-single-header {
+    background: var(--navy-mid);
+    padding: 36px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .inv-plan-label { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .inv-plan-sub { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+  .inv-single-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px; font-weight: 300; color: var(--off-white);
+    line-height: 1; letter-spacing: -0.02em;
+  }
+  .inv-single-price sup { font-size: 22px; vertical-align: super; color: var(--gold); }
+  .inv-single-price sub { font-size: 13px; vertical-align: baseline; color: var(--muted); }
+  .inv-single-body { padding: 36px 48px; background: rgba(9,57,72,0.04); }
+  .inv-single-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .inv-line { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #3a4452; line-height: 1.6; padding: 10px 0; border-bottom: 1px solid rgba(160,175,81,0.15); }
+  .inv-line::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 11px; margin-top: 2px; }
+  .inv-note { margin-top: 28px; font-size: 12px; color: rgba(244,241,235,0.35); font-style: italic; line-height: 1.8; }
 
   /* ── TÉRMINOS ── */
   .terms-block { padding: 72px 60px; }
@@ -188,41 +186,97 @@
   .term-text { font-size: 13px; color: #4a5566; line-height: 1.8; }
 
   /* ── CLOSING ── */
-  .closing { background: var(--navy); padding: 80px 60px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .closing {
+    background: var(--navy); padding: 72px 60px;
+    display: flex; justify-content: space-between;
+    align-items: flex-end; flex-wrap: wrap; gap: 32px;
+  }
   .closing-eyebrow { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-  .closing-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 5vw, 60px); font-weight: 300; color: var(--off-white); line-height: 1.05; letter-spacing: -0.02em; }
+  .closing-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--off-white); line-height: 1.05; letter-spacing: -0.02em; }
   .closing-title em { font-style: italic; color: var(--gold); }
   .closing-note { margin-top: 16px; font-size: 13px; color: rgba(244,241,235,0.4); max-width: 380px; line-height: 1.8; }
   .closing-right { text-align: right; }
-  .closing-studio { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
   .closing-detail { font-size: 12px; color: var(--muted); line-height: 1.8; }
 
-  /* ── SINGLE PLAN ── */
-  .inv-single { border: 1px solid rgba(160,175,81,0.3); overflow: hidden; margin-top: 40px; }
-  .inv-single-header {
-    background: var(--navy-mid);
-    padding: 40px 48px;
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .inv-plan-label { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-  .inv-plan-sub { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
-  .inv-single-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 56px; font-weight: 300; color: var(--off-white);
-    line-height: 1; letter-spacing: -0.02em;
-  }
-  .inv-single-price sup { font-size: 24px; vertical-align: super; color: var(--gold); }
-  .inv-single-price sub { font-size: 14px; vertical-align: baseline; color: var(--muted); }
-  .inv-single-body { padding: 40px 48px; background: rgba(9,57,72,0.04); }
-  .inv-single-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 10px 40px;
-  }
-  .inv-single-grid .inv-line {
-    border-bottom: 1px solid rgba(160,175,81,0.15);
-    padding: 10px 0; color: #3a4452;
-  }
-  .inv-single-grid .inv-line::before { color: var(--gold); }
+  /* ══════════════════════════
+     RESPONSIVE — MOBILE
+  ══════════════════════════ */
+  @media (max-width: 768px) {
 
+    /* Cover */
+    .cover { padding: 36px 24px 32px; min-height: auto; }
+    .cover-doc { display: none; }
+    .cover-main { padding-top: 32px; }
+    .cover-bottom { flex-direction: column; gap: 12px; margin-top: 32px; padding-top: 24px; }
+    .cover-meta { font-size: 11px; }
+    .cover-meta[style] { text-align: left !important; }
+
+    /* Wrap */
+    .wrap { padding: 0 24px; }
+
+    /* Sections padding */
+    .diag-block,
+    .ai-block,
+    .kw-block,
+    .terms-block { padding: 48px 24px; }
+    .serv-block { padding: 48px 24px; }
+    .inv-block { padding: 48px 24px; }
+    .closing { padding: 48px 24px; }
+
+    /* Diagnosis grid — 1 col */
+    .diag-grid { grid-template-columns: 1fr; }
+
+    /* Services — stack num + tag */
+    .serv-row {
+      grid-template-columns: 36px 1fr;
+      gap: 16px;
+    }
+    .serv-tag {
+      grid-column: 2;
+      align-self: auto;
+      margin-top: 12px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .serv-name { font-size: 20px; }
+
+    /* AI grid — 1 col */
+    .ai-grid { grid-template-columns: 1fr; gap: 12px; }
+    .ai-intro { padding: 24px 20px; }
+
+    /* Keywords table — simplify */
+    .kw-table thead { display: none; }
+    .kw-table tr { display: flex; flex-direction: column; padding: 14px 0; border-bottom: 1px solid rgba(160,175,81,0.1); }
+    .kw-table td { padding: 3px 0; border: none; font-size: 12px; }
+    .kw-table td:first-child { font-size: 13px; color: var(--navy); font-weight: 400; margin-bottom: 4px; }
+
+    /* Investment */
+    .inv-single-header { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+    .inv-single-price { font-size: 44px; }
+    .inv-single-body { padding: 28px 24px; }
+    .inv-single-grid { grid-template-columns: 1fr; gap: 0; }
+
+    /* Terms */
+    .term-item { grid-template-columns: 36px 1fr; gap: 14px; }
+
+    /* Closing */
+    .closing { flex-direction: column; align-items: flex-start; }
+    .closing-right { text-align: left; }
+
+    /* Lead text */
+    .lead { margin-bottom: 28px; font-size: 13px; }
+
+    /* Sec label */
+    .sec-label { margin-bottom: 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .cover-title { font-size: 38px; }
+    .sec-title { font-size: 28px; }
+    .closing-title { font-size: 32px; }
+    .diag-title { font-size: 19px; }
+    .serv-name { font-size: 19px; }
+  }
 </style>
 </head>
 <body>
@@ -230,18 +284,18 @@
 <!-- PORTADA -->
 <div class="cover">
   <div class="cover-top">
-    <span class="cover-studio"></span>
+    <span class="cover-logo">Origen Legal</span>
     <span class="cover-doc">Propuesta de servicios digitales</span>
   </div>
   <div class="cover-main">
-    <p class="cover-eyebrow">Origen Legal · origenlegal.co · Medellín</p>
+    <p class="cover-eyebrow">origenlegal.co · Medellín · 2025</p>
     <h1 class="cover-title">SEO con IA,<br>pauta en Google<br>y <em>mantenimiento</em><br>web.</h1>
     <p class="cover-sub">Una estrategia digital construida para que Origen Legal aparezca primero — en Google y en la IA.</p>
   </div>
   <div class="cover-bottom">
     <div class="cover-meta"><strong>Preparado para</strong>Origen Legal · origenlegal.co</div>
-    <div class="cover-meta" style="text-align:center"><strong>Fecha</strong>Junio 2025</div>
-    <div class="cover-meta" style="text-align:right"><strong>Por</strong> · Med, Col</div>
+    <div class="cover-meta"><strong>Fecha</strong>Junio 2025</div>
+    <div class="cover-meta"><strong>Ciudad</strong>Medellín, Colombia</div>
   </div>
 </div>
 
@@ -265,9 +319,13 @@
       <div class="diag-card dark">
         <p class="diag-tag">Nuevo territorio</p>
         <p class="diag-title">Las IAs ya responden preguntas legales</p>
-        <p class="diag-text">Cuando alguien le pregunta a ChatGPT "¿cuál es el mejor abogado de insolvencia en Medellín?" o "¿qué hace un abogado de insolvencia?", la IA cita fuentes web. Si Origen Legal no aparece en esas fuentes, no existe para ese buscador. Eso se puede cambiar.</p>
+        <p class="diag-text">Cuando alguien le pregunta a ChatGPT "¿cuál es el mejor abogado de insolvencia en Medellín?", la IA cita fuentes web. Si Origen Legal no aparece en esas fuentes, no existe para ese buscador. Eso se puede cambiar.</p>
       </div>
-
+      <div class="diag-card">
+        <p class="diag-tag">Base sólida</p>
+        <p class="diag-title">Web en WordPress lista para optimizar</p>
+        <p class="diag-text">La página tiene una estructura funcional en Elementor. No hay que rehacer nada — hay que optimizar lo que existe: velocidad, contenido, meta etiquetas y la conexión con las herramientas de Google.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -291,7 +349,7 @@
           <div class="serv-items">
             <span class="serv-item">Auditoría técnica inicial de la web</span>
             <span class="serv-item">Optimización de meta títulos y descripciones por página</span>
-            <span class="serv-item">Implementación de Schema Markup básico (datos estructurados para abogados)</span>
+            <span class="serv-item">Implementación de Schema Markup básico para abogados</span>
             <span class="serv-item">Diagnóstico de velocidad de carga y ajustes prioritarios</span>
             <span class="serv-item">1 pieza de contenido mensual optimizada por palabras clave</span>
           </div>
@@ -303,30 +361,27 @@
         <span class="serv-num">02</span>
         <div>
           <p class="serv-name">Posicionamiento en IA (GEO)</p>
-          <p class="serv-desc">Generative Engine Optimization — estructuramos el contenido de Origen Legal para que las IAs lo puedan citar. No garantizamos apariciones inmediatas: el GEO es un proceso acumulativo que construye autoridad con el tiempo. Lo que sí entregamos es la base correcta desde el inicio.</p>
+          <p class="serv-desc">Estructuramos el contenido de Origen Legal para que las IAs lo puedan citar. No garantizamos apariciones inmediatas: el GEO es un proceso acumulativo que construye autoridad con el tiempo. Lo que sí entregamos es la base correcta desde el inicio.</p>
           <div class="serv-items">
-            <span class="serv-item">Redacción de contenido en formato pregunta-respuesta (el formato que citan las IAs)</span>
-            <span class="serv-item">Expansión y optimización del FAQ actual para búsquedas en IA</span>
-            <span class="serv-item">Registro en directorios legales relevantes (base de autoridad externa)</span>
-            <span class="serv-item">Optimización de Google Business Profile para respuestas locales</span>
+            <span class="serv-item">Redacción de contenido en formato pregunta-respuesta</span>
+            <span class="serv-item">Expansión y optimización del FAQ para búsquedas en IA</span>
+            <span class="serv-item">Registro en directorios legales relevantes</span>
+            <span class="serv-item">Optimización de Google Business Profile</span>
           </div>
         </div>
         <span class="serv-tag">GEO · IA</span>
       </div>
 
-
-
       <div class="serv-row">
         <span class="serv-num">03</span>
         <div>
-          <p class="serv-name">Mantenimiento y soporte mensual WordPress</p>
-          <p class="serv-desc">Gestión mensual de la página para que siempre esté actualizada, segura y funcionando bien. Incluye cambios de textos e imágenes, actualizaciones del sistema y soporte para cualquier necesidad que surja.</p>
+          <p class="serv-name">Mantenimiento mensual WordPress</p>
+          <p class="serv-desc">Gestión mensual de la página para que siempre esté actualizada, segura y funcionando. Incluye cambios de textos e imágenes, actualizaciones del sistema y soporte para cualquier necesidad que surja.</p>
           <div class="serv-items">
             <span class="serv-item">Actualización de plugins, tema y WordPress core</span>
-            <span class="serv-item">Cambios de textos, imágenes y contenido según se requiera</span>
-            <span class="serv-item">Respaldo (backup) mensual de la web</span>
+            <span class="serv-item">Cambios de textos e imágenes según se requiera</span>
+            <span class="serv-item">Backup mensual de la web</span>
             <span class="serv-item">Monitoreo de seguridad y uptime</span>
-            <span class="serv-item">Soporte para ajustes en Elementor y estructura de páginas</span>
           </div>
         </div>
         <span class="serv-tag">WordPress</span>
@@ -342,23 +397,23 @@
     <p class="sec-label">03 / Por qué el SEO con IA cambia todo</p>
     <h2 class="sec-title">El buscador<br>ya <em>no es solo</em> Google</h2>
     <div class="ai-intro">
-      <p>Hoy, una persona que necesita un abogado de insolvencia puede buscar en Google — o puede preguntarle directamente a <strong>ChatGPT, Gemini o Perplexity</strong>: "¿Cuál es la mejor firma de abogados para insolvencia en Medellín?" Si Origen Legal no está construyendo autoridad de contenido, la IA nunca la mencionará. <strong>El GEO (Generative Engine Optimization)</strong> es la estrategia que lo hace posible.</p>
+      <p>Hoy, una persona que necesita un abogado puede buscar en Google — o puede preguntarle directamente a <strong>ChatGPT, Gemini o Perplexity</strong>: "¿Cuál es la mejor firma de abogados para insolvencia en Medellín?" Si Origen Legal no está construyendo autoridad de contenido, la IA nunca la mencionará. <strong>El GEO (Generative Engine Optimization)</strong> es la estrategia que lo hace posible.</p>
     </div>
     <div class="ai-grid">
       <div class="ai-card">
         <div class="ai-icon">🤖</div>
         <p class="ai-title">Cómo cita la IA</p>
-        <p class="ai-text">Las IAs generativas citan páginas con contenido claro, estructurado en preguntas y respuestas, con autoridad de dominio y menciones externas. Construimos esa base para Origen Legal — los resultados se consolidan con el tiempo.</p>
+        <p class="ai-text">Las IAs citan páginas con contenido claro, estructurado en preguntas y respuestas, con autoridad de dominio y menciones externas. Construimos esa base para Origen Legal — los resultados se consolidan con el tiempo.</p>
       </div>
       <div class="ai-card">
         <div class="ai-icon">📍</div>
         <p class="ai-title">Búsquedas locales</p>
-        <p class="ai-text">"Mejor abogado de divorcios en Medellín", "abogado insolvencia Antioquia" — son búsquedas con alta intención de contratación. El SEO local y el GEO construyen presencia en ambos canales progresivamente.</p>
+        <p class="ai-text">"Mejor abogado de divorcios en Medellín", "abogado insolvencia Antioquia" — búsquedas con alta intención de contratación. El SEO local y el GEO construyen presencia en ambos canales progresivamente.</p>
       </div>
       <div class="ai-card">
         <div class="ai-icon">📈</div>
         <p class="ai-title">Ventaja competitiva</p>
-        <p class="ai-text">La mayoría de firmas legales en Colombia aún no trabaja GEO. Iniciar ahora construye ventaja acumulativa — el posicionamiento en IA favorece a quienes llevan más tiempo publicando contenido relevante y estructurado.</p>
+        <p class="ai-text">La mayoría de firmas legales en Colombia aún no trabaja GEO. Iniciar ahora construye ventaja acumulativa — el posicionamiento en IA favorece a quienes llevan más tiempo publicando contenido estructurado.</p>
       </div>
     </div>
   </div>
@@ -387,7 +442,7 @@
         <tr>
           <td>¿cómo salir de deudas legalmente en Colombia?</td>
           <td><span class="kw-badge kw-ai">IA</span></td>
-          <td>Informacional — captura en fase de consideración</td>
+          <td>Informacional — fase de consideración</td>
         </tr>
         <tr>
           <td>firma de abogados Medellín personas naturales</td>
@@ -407,7 +462,7 @@
         <tr>
           <td>constitución de empresa Colombia paso a paso</td>
           <td><span class="kw-badge kw-google">Google</span></td>
-          <td>Informacional — tráfico de emprendedores</td>
+          <td>Informacional — tráfico emprendedores</td>
         </tr>
         <tr>
           <td>mejor abogado para emprendedores Medellín</td>
@@ -440,26 +495,30 @@
 <div class="inv-block">
   <div class="wrap">
     <p class="sec-label">05 / Inversión</p>
-    <h2 class="sec-title">Planes mensuales<br>de <em>servicio</em></h2>
+    <h2 class="sec-title">Fee mensual<br>de <em>servicio</em></h2>
 
-    <div class="inv-cards">
-
-      <div class="inv-card featured">
-        <p class="inv-plan">Plan SEO + IA ✦ Recomendado</p>
-        <p class="inv-price" style="color:#093948">$950.000cop</p>
-        <p class="inv-period">COP / mes</p>
-        <div class="inv-includes">
-          <div class="inv-line">Todo el Plan Esencial incluido</div>
-          <div class="inv-line">Auditoría técnica inicial + ajustes técnicos prioritarios</div>
-          <div class="inv-line">1 artículo / contenido optimizado para IA</div>
-          <div class="inv-line">Optimización GEO (posicionamiento en IAs)</div>
-          <div class="inv-line">Google Business Profile optimizado</div>
-          <div class="inv-line">Reporte mensual de posicionamiento</div>
-
+    <div class="inv-single">
+      <div class="inv-single-header">
+        <div>
+          <p class="inv-plan-label">Fee mensual de consultoría</p>
+          <p class="inv-plan-sub">Pago anticipado · Mínimo recomendado: 3 meses</p>
+        </div>
+        <div class="inv-single-price">
+          <sup>$</sup>900.000<sub> COP/mes</sub>
         </div>
       </div>
-
-
+      <div class="inv-single-body">
+        <div class="inv-single-grid">
+          <div class="inv-line">Mantenimiento WordPress mensual</div>
+          <div class="inv-line">Actualización de plugins y core</div>
+          <div class="inv-line">Cambios de textos e imágenes según se requiera</div>
+          <div class="inv-line">Backup mensual y monitoreo de seguridad</div>
+          <div class="inv-line">Auditoría técnica inicial + ajustes prioritarios</div>
+          <div class="inv-line">1 pieza de contenido mensual optimizada para IA</div>
+          <div class="inv-line">Base GEO: estructura de contenido y FAQ para IAs</div>
+          <div class="inv-line">Google Business Profile optimizado</div>
+        </div>
+      </div>
     </div>
 
     <p class="inv-note">* Este servicio no incluye gestión de pauta publicitaria. · El SEO y el GEO son procesos acumulativos: los primeros resultados visibles aparecen entre el segundo y tercer mes. · Permanencia mínima recomendada: 3 meses.</p>
@@ -486,7 +545,7 @@
       </div>
       <div class="term-item">
         <span class="term-num">04</span>
-        <p class="term-text">Este servicio no incluye la creación ni gestión de campañas de pauta en Google Ads u otras plataformas publicitarias.  se enfoca exclusivamente en posicionamiento orgánico (SEO) y posicionamiento en buscadores de IA (GEO).</p>
+        <p class="term-text">Este servicio no incluye la creación ni gestión de campañas de pauta publicitaria. El enfoque es exclusivamente posicionamiento orgánico (SEO) y posicionamiento en buscadores de IA (GEO).</p>
       </div>
       <div class="term-item">
         <span class="term-num">05</span>
@@ -503,15 +562,15 @@
 <!-- CLOSING -->
 <div class="closing">
   <div>
-    <p class="closing-eyebrow"> × Origen Legal</p>
+    <p class="closing-eyebrow">Origen Legal · origenlegal.co</p>
     <h2 class="closing-title">Que te encuentren<br>antes que a<br><em>la competencia.</em></h2>
     <p class="closing-note">En legal, la confianza se construye antes del primer contacto. El SEO y el posicionamiento en IA son la primera impresión.</p>
   </div>
   <div class="closing-right">
-    
-    <p class="closing-detail">Med — Col · 2025<br>origenlegal.co</p>
+    <p class="closing-detail">Medellín, Colombia · 2025<br>origenlegal.co</p>
   </div>
 </div>
 
 </body>
 </html>
+
